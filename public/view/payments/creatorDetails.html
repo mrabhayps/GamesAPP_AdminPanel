@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Details</title>
+    <!-- <script src="../../js/script.js"></script> -->
+    <script src="../../commonClientConfig.js"></script>
+    
+  <link rel="stylesheet" href="../../css/common.css">
+  <script type="text/javascript" src="../../js/navBar.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    
+</head>
+
+<body>
+  <my-header></my-header>
+  <h3 class="text-center">Creator Details</h3>
+  <input class="text-center sec-key-creator" id="security-key" placeholder="*Input Security Key Here">
+  <!-- <br><input id="idFilter" style="margin-left: 40vw;" placeholder="Enter Mobile Number"><button id="filterBtn">Submit</button>
+    <br> -->
+    <div class="text-center d-inline">
+    <button class="btn btn-primary" id="button_creator">GetList</button><br></div>
+  <!-- <div id="security_key_option">
+  <label for="security_key">SECURITY KEY:</label>
+  <input type="text" id="security_key" name="security_key">
+  <div> -->
+  <br><br>
+  <div class="divScroll">
+    <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+      <tr id="table-header">
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>fkUserId</th>
+        <th>socialMediaLink</th>
+        <th>Status</th>
+        <th>createdAT</th>
+        <th>updatedAt</th>
+
+      </tr>
+      <tbody id="table_data"></tbody>
+    </table>
+  </div>
+  <div class="text-center" id="nav-button">
+  </div>
+
+
+</body>
+
+<script src="../../js/creatorDetails.js">
+</script>
+
+</html>
+<script src="../../js/hrefLinks.js"></script>

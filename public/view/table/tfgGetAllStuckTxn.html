@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFG-allstucktxn</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/script_refundTxn.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../commonClientConfig.js"></script>
+</head>  
+<body>
+ <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+  <button onclick="getAllTFGStuckTxn()" id="button_withdraw">TFGStuckTxn</button><br><br>
+  <div id="security_key_option">
+  <label for="security_key">SECURITY KEY:</label>
+  <input type="text" id="security_key" name="security_key">
+  <div>
+    <br><br>
+<table >
+  <tr id="table-header">
+    <th>gameTxnId</th>
+    <th>UserName</th>
+    <th>Amount</th>
+    <th>Time</th>
+    <th>EndTxn</th>  
+  </tr>
+  <tbody id="table_data"></tbody>
+</table>
+
+      
+</body>
+</html>

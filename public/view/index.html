@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>GamesApp</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body><h1 class="text-center" id="home-heading">Welcome To Admin Panel Home Page </h1> 
+    <p id="serverStatus">Status</p>
+    <div class="row row-cols-3">
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-arrow-left-right text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">Payment services</h5>
+                    <p class="card-text">view the details for withdraw transaction list, deposit transaction list,
+                        payment Approval, externalApiLogWithdrawal,transaction history </p>
+                    <div class="text-center mb-2"> <a
+                            href="./_v/payments/withdrawTransactions"><button
+                                class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-cc-circle-fill text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">Common services</h5>
+                    <p class="card-text">view the details for sendPushNotification </p>
+                    <div class="text-center mb-2"> <a href="./_v/sendPushNotification"><button
+                                class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-list-ol text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">OTP details</h5>
+                    <p class="card-text">view the details for otp </p>
+                    <div class="text-center mb-2"> <a href="./_v/payments/otpDetails"><button
+                                class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more cards here -->
+    </div>
+    <br>
+    <div class="row row-cols-3">
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-person-circle text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">user details</h5>
+                    <p class="card-text">view the user details </p>
+                    <div class="text-center mb-2"><a href="./_v/payments/userDetails"><button
+                                class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-slash-circle-fill text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">Error details</h5>
+                    <p class="card-text">view the Error details for any user</p>
+                    <div class="text-center mb-2"> <a href="./_v/payments/errorDetails"><button
+                                class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-slash-circle-fill text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">Bank details</h5>
+                    <p class="card-text">view the Bank Account details for any user</p>
+                    <div class="text-center mb-2" > <a
+                            href="./_v/payments/bankAccountDetails"><button class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <br>
+    <div class="row row-cols-3">
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-slash-circle-fill text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">userIdBasedData</h5>
+                    <p class="card-text">view the details based on userId</p>
+                    <div class="text-center mb-2"> <a href="./_v/payments/useridDetails"><button
+                                class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-slash-circle-fill text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">Creator details</h5>
+                    <p class="card-text">view the Creator Accounts details</p>
+                    <div class="text-center mb-2"> 
+                        <a href="./_v/payments/creatorDetails"><button class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-home">
+                <h2 class="bi bi-slash-circle-fill text-center text-danger"></h2>
+                <div class="card-body">
+                    <h5 class="card-title">Failed and Successful Txn Records</h5>
+                    <p class="card-text">view the number of failed or successful transaction for today during 
+                        Deposit or Withdrawal
+                    </p>
+                    <div class="text-center mb-2">
+                         <a href="./_v/countTxnDetails"><button class="btn btn-primary ">click</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../js/serverStatus.js"></script>
+
+<script src="../commonClientConfig.js"></script>
+
+</html>

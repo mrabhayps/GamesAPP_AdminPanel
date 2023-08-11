@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendPushNotification</title>
+    <script src="../../js/script_notification.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../commonClientConfig.js"></script>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/navBar.js"></script>
+</head>
+
+<body>
+    <my-header></my-header>
+    <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+    <h3 class="text-center"> SEND NOTIFICATION PANEL</h3>
+    <br>
+    
+<div class="card text-center notification-box">
+    *Notification Type :
+    <br>
+    <select class="input-notif" id="form_notification" >
+        <option>Choose your option</option>
+        <option value="APP_NEW_VERSION">APP NEW VERSION</option>
+    </select>
+    <br>
+    <label for="version_type">*Notification Send for , ALL - AllUser OR Enter specific version</label>
+    <input type="text" class="input-notif" id="version_type" name="version_type" >
+    <br>
+    <label for="notification_text"> *Text in notification</label>
+    <input type="text" class="input-notif" id="notification_text" ,name="notification_text">
+    <br>
+    <label for="url_link">URL(If new APP Then App URL.)</label>
+    <input type="text" class="input-notif" id="url_link" name="url_link" >
+    <br>
+    <label for="security_key">*SECURITY KEY:</label>
+    <input type="text" class="input-notif" id="security_key" name="security_key">
+    <br>
+    <button class="btn btn-primary input-notif" id="send_notification"onclick="sendPushNotification()">
+        Send Notification </button>
+</div>
+
+</body>
+
+</html>
+
+<script>
+    
+    const navBtn = document.getElementsByClassName('dropbtn');
+    const active = document.getElementById('common-services');
+    
+    
+    for(let i=0; i<navBtn.length; i++){    
+        console.log('aaaaaa');
+        navBtn[i].style.background = '#ecf4fd';
+    }
+    active.style.background = '#a7a0a0';
+    
+    </script>
+<script type="text/javascript" src="../../js/hrefLinks.js"></script>

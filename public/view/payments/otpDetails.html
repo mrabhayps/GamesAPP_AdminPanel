@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp Details</title>
+    <!-- <script src="../../js/script.js"></script> -->
+    <script src="../../commonClientConfig.js"></script>
+        <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+        
+  <link rel="stylesheet" href="../../css/common.css">
+  <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <script type="text/javascript" src="../../js/navBar.js"></script>
+</head>
+
+<body>
+  <my-header></my-header>
+  <img height="60px" width="200px" src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+    <h3 class="text-center">OTP Details</h3>
+    <input class="text-center sec-key-otp" id="security-key" placeholder="*Input Security Key Here">
+    <div class="text-center d-inline">
+    <button class="btn btn-primary" id="button_otp">GetList</button>
+    <input id="idFilter" class="ms-5" placeholder="Enter Mobile Number">
+    <button class="btn btn-primary" id="filterBtn">Submit</button></div>
+    <br>
+  <!-- <div id="security_key_option">
+  <label for="security_key">SECURITY KEY:</label>
+  <input type="text" id="security_key" name="security_key">
+  <div> -->
+    <br><br>
+    <div class="divScroll">
+      <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center" >
+        <tr id="table-header">
+          <th >S_No.</th>
+          <th >ID</th>
+          <th>Mobile</th>
+          <th>OTP</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+          <th >status</th>
+          
+        </tr>
+        <tbody id="table_data"></tbody>
+      </table>
+    </div>
+    <div id="prev_next_button"></div>
+    
+
+</body>
+<script src="../../js/otpData.js">
+</script>
+
+</html>
+<script type="text/javascript" src="../../js/hrefLinks.js"></script>

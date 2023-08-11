@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gamesapp-admin-panel</title>
+    <script src="../../js/userIdBasedDetails.js"></script>
+    <script src="../../commonClientConfig.js"></script>
+    <link rel="stylesheet" href="../../css/common.css">
+    <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jquery37.js"></script>
+    <script type="text/javascript" src="../../js/navBar.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script
+        src="../../js/simplePagination.js"></script>
+        <link rel="stylesheet" href="../../css/simplePagination.min.css">
+</head>
+
+<body>
+    <my-header></my-header>
+    <p id="security_key_message" class="text-danger text-center"></p>
+    <h1 class="text-center">userIdBased Details[Master Page]</h1>
+    <div>
+        <div class="text-center">
+            <nobr>
+                <label for="security_key">*SECURITY KEY:</label>
+                <input type="text" id="security_key" name="security_key" class="border border-primary">
+                <label for="mobile">Mobile.no:</label>
+                <input type="text" id="mobile" name="mobile" class="border border-primary"
+                    placeholder="For OTP details">
+                <input type="number" id="userId1" placeholder="*PlayerId" name="userId1" class="border border-primary "
+                    required>
+                <button onclick="userIdBasedDetails()" id="button_withdraw"
+                    class="btn btn-primary">SUBMIT</button><br><br>
+        </div>
+        <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+        <div id="security_key_option">
+            <!-- <label for="security_key">SECURITY KEY:</label>
+        <input type="text" id="security_key" name="security_key"> -->
+            <div>
+                <br><br>
+            </div>
+            <p class="text-center">OTP Details</p>
+            <div class="divScroll">
+                <table
+                    class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                    <tr id="table-header">
+                        <th>ID</th>
+                        <th>Mobile</th>
+                        <th>OTP</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                        <th>status</th>
+
+                    </tr>
+                    <tbody id="otp_table">
+                        <tr id="spinnerRow">
+                            <td colspan="14">
+                                <div class="spinner"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <p class="text-center">User Details</p>
+            <div class="divScroll">
+                <table
+                    class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                    <tr class="table-header">
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Image</th>
+                        <th>Default Image</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Continent</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                        <th>Updated By</th>
+                        <th>winPrize</th>
+                        <th>winPrizeT</th>
+                        <th>rank</th>
+                        <th>rankT</th>
+                        <th>status</th>
+                        <th>latitude</th>
+                        <th>longitude</th>
+                        <th>canUpdateUserName</th>
+                        <th>totalWins</th>
+                        <th>totalWinningAmount</th>
+                        <th>gameMatrix</th>
+                        <th>userName</th>
+                        <th>facebookId</th>
+                        <th>referralCode</th>
+                        <th>lastSeen</th>
+                        <th>restoreId</th>
+                        <th>isCreatorStatus</th>
+                        <th>kycStatus</th>
+                        <th>kycResponse</th>
+                        <th>reportedCount</th>
+                    </tr>
+                    <tbody id="user_table" ></tbody>
+                </table>
+            </div><br>
+            <p class="text-center">Bank Details</p>
+            <div class="divScroll">
+                <table
+                    class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                    <tr class="table-header">
+                        <th>ID</th>
+                        <th>User Id</th>
+                        <th>Name In Bank</th>
+                        <th>Account Number</th>
+                        <th>Bank Name</th>
+                        <th>IFSC</th>
+                        <th>UPI Id</th>
+                        <th>State</th>
+                        <th>isKYC</th>
+                        <th>Paytm Mobile</th>
+                        <th>createdAt</th>
+                        <th>updatedAt</th>
+                        <th>isActive</th>
+                        <th>isAccountVerified</th>
+
+                    </tr>
+                    <tbody id="bank_table" class="text-danger">
+                    </tbody>
+                </table>
+            </div><br>
+            <p class="text-center">Deposit Details</p>
+            <div class="divScroll">
+                <table
+                    class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                    <tr class="table-header">
+                        <th>fkSenderId</th>
+                        <th>senderAcNum</th>
+                        <th>fkReceiverId</th>
+                        <th>receiverAcNum</th>
+                        <th>Amount</th>
+                        <th>senderClosingBalance</th>
+                        <th>receiverClosingBalance</th>
+                        <th>requestType</th>
+                        <th>Pay status</th>
+                        <th>createdAt</th>
+                        <th>updatedAt</th>
+                        <th>pgRefNo</th>
+                        <th>bankRefNo</th>
+                        <th>apiMsg</th>
+                        <th>description</th>
+                        <th>utrNo</th>
+                        <th>fkGameId</th>
+                        <th>gameEngine</th>
+                        <th>engineId</th>
+                    </tr>
+                    <tbody id="deposit_table"></tbody>
+                </table>
+            </div><br>
+            <p class="text-center">Withdraw Details</p>
+            <div class="divScroll">
+                <table
+                    class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                    <tr class="table-header">
+                        <th>userId</th>
+                        <th>TxnType</th>
+                        <th>Amount</th>
+                        <th>Request Type</th>
+                        <th>Pay Status</th>
+                        <th>Date</th>
+                        <th>TxnId</th>
+                        <th>UTR</th>
+                        <th>CustomerRefNo</th>
+                        <th>Battle Room Id</th>
+                        <th>API msg</th>
+                        <th>fkGameId</th>
+                        <th>Game Engine</th>
+                        <th>Engine Id</th>
+                    </tr>
+                    <tbody id="withdraw_table"></tbody>
+                </table>
+            </div><br>
+            <p id="errorMessage" class="text-danger"></p>
+            <div id="buttonId"></div>
+            <div id="totalRecordData"></div>
+            <div id="goToPage"></div>
+            <div id="pagination"></div>
+            <!-- <input type="text" id="goToPage" placeholder="page number" name="page number"
+                    class="border border-warning " required>
+                <button onclick="withdrawTransactionTxn()" id="button_withdraw" class="btn btn-primary">SUBMIT</button> -->
+
+</body>
+
+</html>
+<script>
+    
+const navBtn = document.getElementsByClassName('dropbtn');
+const active = document.getElementById('master-detail');
+
+
+for(let i=0; i<navBtn.length; i++){    
+    console.log('aaaaaa');
+    navBtn[i].style.background = '#ecf4fd';
+}
+active.style.background = '#a7a0a0';
+
+</script>
+<script src="../../js/hrefLinks.js"></script>

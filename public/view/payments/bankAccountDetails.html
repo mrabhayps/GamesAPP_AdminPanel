@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Bank Account Details</title>
+    <!-- <script src="../../js/script.js"></script> -->
+    <script src="../../commonClientConfig.js"></script>
+  <script type="text/javascript" src="../../js/navBar.js"></script>
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+
+<body>
+  <my-header></my-header>
+    <h3 class="text-center">User Bank Account Details</h3>
+    <input class="text-center sec-key-account" id="security-key" placeholder="*Input Security Key Here">
+    <div class="text-center d-inline">
+    <button class="btn btn-primary" id="button_userAccount">GetList</button>
+    <input type="number" id="idFilter" class="ms-5" placeholder="Enter User ID">
+    <button class="btn btn-primary" id="filterBtn">Submit</button>
+    </div>
+    <select class="ms-5" id="filterType" aria-placeholder="Choose Filter">
+      <option>Choose Filter</option>
+    <option>Is Active</option>
+    <option>Is Account Verified</option>
+  </select>
+  <br>
+
+  <!-- <div id="security_key_option">
+  <label for="security_key">SECURITY KEY:</label>
+  <input type="text" id="security_key" name="security_key">
+  <div> -->
+    <br><br>
+    <div class="divScroll">
+      <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center" >
+        <tr id="table-header" >
+          <th>S.No.</th>
+          <th>User Id</th>
+          <th>Name In Bank</th>
+          <th>Account Number</th>
+          <th>Bank Name</th>
+          <th>IFSC</th>
+          <th>UPI Id</th>
+          <th>State</th>
+          <th>isKYC</th>
+          <th>Paytm Mobile</th>
+          <th>createdAt</th>
+          <th>updatedAt</th>
+          <th>isActive</th>
+          <th>isAccountVerified</th>
+          
+        </tr>
+        <tbody id="table_data"></tbody>
+      </table>
+    </div>
+    <div class="text-center" id="nav-btns">
+      <button id="btn1" class="btn btn-primary Paging mt-1 ms-2">1</button>
+      <button id="btn2" class="btn btn-primary Paging  mt-1 ms-2" >2</button>
+      <button id="btn3" class="btn btn-primary Paging  mt-1 ms-2">3</button>
+      <button id="btn4" class="btn btn-primary Paging  mt-1 ms-2">4</button>
+      <button id="btn5" class="btn btn-primary Paging  mt-1 ms-2">last</button><br>
+      <input id="goto" type="number" placeholder="input page number">
+      <button id="jump" class="btn btn-primary Paging ms-2">Go</button>
+    </div>
+    
+
+</body>
+<script src="../../js/userAccountDetails.js">
+</script>
+
+</html>
+<script src="../../js/hrefLinks.js"></script>

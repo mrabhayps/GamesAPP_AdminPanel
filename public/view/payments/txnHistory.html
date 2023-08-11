@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gamesapp-admin-panel</title>
+    <script src="../../js/txnHistory.js"></script>
+    <script src="../../commonClientConfig.js"></script>
+    <link rel="stylesheet" href="../../css/common.css">
+    <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jquery37.js"></script>
+    <script type="text/javascript" src="../../js/navBar.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script
+        src="../../js/simplePagination.js"></script>
+    <link rel="stylesheet" href="../../css/simplePagination.min.css">
+</head>
+
+<body>
+    <my-header></my-header>
+
+    <h1 class="text-center">Transaction History Details</h1>
+
+    <p id="security_key_message" class="text-danger text-center"></p>
+    <div >
+        <nobr>
+            <div class="text-center">
+                <nobr>
+                    <label for="security_key">*SECURITY KEY:</label>
+                    <input type="text" id="security_key" name="security_key" class="border border-primary">
+                    <label for="select">
+                        <p>*latest:</p>
+                    </label>
+                    <select id="select" class="border border-primary">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                    <label for="userId1">
+                        <p>*userId:</p>
+                    </label>
+                    <input type="number" id="userId1" placeholder="PlayerId" name="userId1" class="border border-primary "
+                        required>
+                    <label for="historyType">
+                        <p>*Txn history type:</p>
+                    </label>
+                    <select id="historyType" class="border border-primary">
+                        <option value="games">games</option>
+                        <option value="deposit">deposit</option>
+                        <option value="withdrawals">withdrawals</option>
+                        <option value="others">others</option>
+                    </select>
+                    <button onclick="txnHistoryDetails()" id="button_withdraw" class="btn btn-primary">SUBMIT</button>
+                </nobr>
+            </div>
+            <!-- <div class="text-center">
+                    <button onclick="txnHistoryDetails()" id="button_withdraw"
+                        class="btn btn-primary">SUBMIT</button><br><br>
+                </div> -->
+            <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+            <div id="security_key_option">
+                <!-- <label for="security_key">SECURITY KEY:</label>
+        <input type="text" id="security_key" name="security_key"> -->
+                <br>
+                <div class="divScroll">
+                    <table
+                        class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                        <tr id="table-header">
+                            <th>fkSenderId</th>
+                            <th>fkReceiverId</th>
+                            <th>amount</th>
+                            <th>payStatus</th>
+                            <th>Request Type</th>
+                            <th>createdAt</th>
+                            <th>fkGameId</th>
+                            <th>gameEngine</th>
+                            <th>engineId</th>
+                            <th>pgRefNo</th>
+                            <th>wallet</th>
+                            <th>description</th>
+                            <th>utrNo</th>
+                            <th>trxType</th>
+                            <th>trxTypeMsg</th>
+                            <th>requestTypeMsg</th>
+                            <th>payResult</th>
+                            <th>trxDetails</th>
+                        </tr>
+                        <tbody id="table_data"></tbody>
+                    </table>
+                </div>
+                <p id="errorMessage" class="text-danger"></p>
+                <div id="buttonId"></div>
+                <div id="totalRecordData"></div>
+                <div id="goToPage"></div>
+                <div id="pagination" class="txnHis-paging"></div>
+            </div>
+            <!-- <input type="text" id="goToPage" placeholder="page number" name="page number"
+                    class="border border-warning " required>
+                <button onclick="withdrawTransactionTxn()" id="button_withdraw" class="btn btn-primary">SUBMIT</button> -->
+
+</body>
+
+</html>
+<script src="../../js/hrefLinks.js"></script>

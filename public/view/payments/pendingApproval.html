@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gamesapp-admin-panel</title>
+  <script src="../../js/script.js"></script>
+  <script src="../../commonClientConfig.js"></script>
+  <link rel="stylesheet" href="../../css/common.css">
+  <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <script src="../../js/jquery37.js"></script>
+  <script type="text/javascript" src="../../js/navBar.js"></script>
+
+<body>
+  <my-header></my-header>
+  <h1 class="text-center">Pending Approvals</h1>
+
+  <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+  <div >
+    <div id="security_key_option">
+      <label for="security_key" class="text-center sec-key-pending">*SECURITY KEY:</label>
+      <input type="text" id="security_key" name="security_key" class="text-center border border-primary">
+      <button onclick="pendngWithdrwAllTxn()" id="button_withdraw" class="btn btn-primary">SUBMIT</button><br><br>
+      <br>
+      <div class="divScroll">
+        <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+          <tr id="table-header">
+            <th>logID</th>
+            <th>UserName</th>
+            <th>Amount</th>
+            <th>Mobile</th>
+            <th>Time</th>
+            <th>Approve/Reject</th>
+
+          </tr>
+          <tbody id="table_data" ></tbody>
+        </table>
+
+      </div>
+    </div>
+</body>
+
+</html>
+<script src="../../js/hrefLinks.js"></script>

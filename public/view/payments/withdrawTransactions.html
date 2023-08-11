@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gamesapp-admin-panel</title>
+    <script src="../../js/withdrawTxn.js"></script>
+    <script src="../../commonClientConfig.js"></script>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/navBar.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script
+        src="../../js/simplePagination.js"></script>
+        <link rel="stylesheet" href="../../css/simplePagination.min.css">
+</head>
+
+<body>
+    <my-header></my-header>
+    <h1 class="text-center main">Withdrawals in past 24hrs</h1>
+    <p id="security_key_message" class="text-danger text-center"></p>
+
+    <div>
+        <div>
+            <nobr>
+                <div class="text-center">
+                    <nobr>
+                        <label for="security_key">*SECURITY KEY:</label>
+                        <input type="text" id="security_key" name="security_key" class="border border-primary">
+                        <label for="fromDate">
+                            <p>Filter by date:</p>
+                        </label>
+                        <input type="date" name="inputDate" id="fromDate" placeholder="YYYY-MM-DD"
+                            title="Enter a date in this formart" class="border border-primary"
+                            onkeypress="return false" />
+                        <p id="paraId">to</p><input type="date" name="inputDate" id="toDate"
+                            placeholder="YYYY-MM-DD" title="Enter a date in this formart" class="border border-primary"
+                            onkeypress="return false" />
+                        <label for="select">
+                            <p>*select the option:</p>
+                        </label>
+                        <select id="select" class="border border-primary" onchange="enableOption(this)">
+                            <option value="All">All</option>
+                            <option value="userId">userId</option>
+                            <option value="requestType">requestType</option>
+                            <option value="payStatus">payStatus</option>
+                            <option value="IdAndStatus">IdAndStatus</option>
+                        </select>
+                        <select id="requestType" class="d-none border border-primary">
+                            <option value="10">Outward</option>
+                            <option value="20">Gameplay</option>
+                            <option value="30">winningPrize</option>
+                            <option value="40">CommissionCharge</option>
+                            <option value="42">TFGRefundToPlAc</option>
+                            <option value="50">RefundToPlAc</option>
+                            <option value="60">RefundOutwardAfterFailed</option>
+                            <option value="70">RejectOutward</option>
+                            <option value="120">Referral</option>
+                        </select>
+                        <select id="payStatus" class="d-none border border-primary">
+                            <option value="10">Success</option>
+                            <option value="20">Failed</option>
+                            <option value="30">Pending</option>
+                            <option value="40">ManualRefund</option>
+                            <option value="50">PendingForApproval</option>
+                        </select>
+                        
+                        <div id="userIdAndStatus" class="d-none" onchange="enableOption(this)">
+                            <input type="number" id="userId1" placeholder="*PlayerId" name="userId1"
+                                class="border border-warning " required>
+                            <input type="text" id="payStatus1" placeholder="*payStatus" name="payStatus1"
+                                class="border border-warning " required>
+                        </div>
+                        
+                        <input type="number" id="security_key_userId" placeholder="*PlayerId" name="security_key"
+                        class="border border-warning d-none" required>
+                        <div class="text-center d-inline">
+                            <button onclick="withdrawTransactionTxn()" id="button_withdraw"
+                                class="btn btn-primary">SUBMIT</button><br><br>
+                        </div>
+                        <div id="security_key_option" class="text-center ">
+                            <br>
+                            <div>
+
+                    </nobr>
+
+                </div>
+        </div>
+        <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+        <div id="security_key_option">
+            <!-- <label for="security_key">SECURITY KEY:</label>
+        <input type="text" id="security_key" name="security_key"> -->
+            <div class="divScroll">
+                <table
+                    class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+                    <tr id="table-header">
+                        <th>userId</th>
+                        <th>User Name</th>
+                        <th>TxnType</th>
+                        <th>Amount</th>
+                        <th>Request Type</th>
+                        <th>Pay Status</th>
+                        <th>Date</th>
+                        <th>TxnId</th>
+                        <th>UTR</th>
+                        <th>CustomerRefNo</th>
+                        <th>Battle Room Id</th>
+                        <th>API msg</th>
+                        <th>fkGameId</th>
+                        <th>Game Engine</th>
+                        <th>Engine Id</th>
+                    </tr>
+                    <tbody id="table_data" ></tbody>
+                </table>
+            </div>
+            <p id="errorMessage" class="text-danger"></p>
+            <div id="buttonId"></div>
+            <div id="totalRecordData"></div>
+            <div id="goToPage"></div>
+            <!-- <input type="text" id="goToPage" placeholder="page number" name="page number"
+                    class="border border-warning " required>
+                <button onclick="withdrawTransactionTxn()" id="button_withdraw" class="btn btn-primary">SUBMIT</button> -->
+            <div id="pagination" class="text-center withdraw-paging"></div>
+
+</body>
+
+</html>
+
+<script>
+</script>
+<script type="text/javascript">
+    function enableOption(answer) {
+        if (answer.value == "requestType") {
+            document.getElementById("requestType").classList.remove('d-none');
+            document.getElementById("requestType").classList.add('d-inline');
+            document.getElementById("payStatus").classList.add('d-none');
+            document.getElementById("security_key_userId").classList.add('d-none');
+            document.getElementById("userIdAndStatus").classList.add('d-none');
+
+        } else if (answer.value == "payStatus") {
+            document.getElementById("payStatus").classList.remove('d-none');
+            document.getElementById("payStatus").classList.add('d-inline');
+            document.getElementById("requestType").classList.add('d-none');
+            document.getElementById("security_key_userId").classList.add('d-none');
+            document.getElementById("userIdAndStatus").classList.add('d-none');
+        } else if (answer.value == 'userId') {
+            document.getElementById("security_key_userId").classList.remove('d-none');
+            document.getElementById("security_key_userId").classList.add('d-inline');
+            document.getElementById("payStatus").classList.add('d-none');
+            document.getElementById("requestType").classList.add('d-none');
+            document.getElementById("userIdAndStatus").classList.add('d-none');
+        }
+        else if (answer.value == 'IdAndStatus') {
+            document.getElementById("userIdAndStatus").classList.remove('d-none');
+            document.getElementById("userIdAndStatus").classList.add('d-inline');
+            document.getElementById("requestType").classList.add('d-none');
+            document.getElementById("security_key_userId").classList.add('d-none');
+            document.getElementById("payStatus").classList.add('d-none');
+        }
+        else if (answer.value == 'All') {
+            document.getElementById("userIdAndStatus").classList.add('d-none');
+            document.getElementById("requestType").classList.add('d-none');
+            document.getElementById("security_key_userId").classList.add('d-none');
+            document.getElementById("payStatus").classList.add('d-none');
+        }
+
+    }
+</script>
+<script src="../../js/hrefLinks.js"></script>

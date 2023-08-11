@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Details</title>
+    <!-- <script src="../../js/script.js"></script> -->
+    <script src="../../commonClientConfig.js"></script>
+    
+  <link rel="stylesheet" href="../../css/common.css">
+  <script type="text/javascript" src="../../js/navBar.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    
+</head>
+
+<body>
+  <my-header></my-header>
+  <h3 class="text-center">Error Details</h3>
+  <input class="text-center sec-key-error" id="security-key" placeholder="*Input Security Key Here">
+  <!-- <br><input id="idFilter" style="margin-left: 40vw;" placeholder="Enter Mobile Number"><button id="filterBtn">Submit</button>
+    <br> -->
+    <div class="text-center d-inline">
+    <button id="button_error" class="btn btn-primary">GetList</button>
+    <input type="date" class="ms-4" id="days"><br></div>
+  <!-- <div id="security_key_option">
+  <label for="security_key">SECURITY KEY:</label>
+  <input type="text" id="security_key" name="security_key">
+  <div> -->
+  <br><br>
+  <div class="divScroll">
+    <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+      <tr id="table-header">
+        <th>ID</th>
+        <th>Module</th>
+        <th>Error Name</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+
+      </tr>
+      <tbody id="table_data"></tbody>
+    </table>
+  </div>
+  <div class="text-center" id="nav-button">
+  </div>
+
+
+</body>
+
+<script src="../../js/errorDetails.js">
+</script>
+</html>
+<script src="../../js/hrefLinks.js"></script>

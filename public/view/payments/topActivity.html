@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Activity page</title>
+    <script src="../../js/topActivity.js"></script>
+    <script src="../../commonClientConfig.js"></script>
+    <link rel="stylesheet" href="../../css/common.css">
+    <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jquery37.js"></script>
+    <script type="text/javascript" src="../../js/navBar.js"></script>
+</head>
+
+<body>
+    <my-header></my-header>
+    <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+    <h3 class="text-center">Top Activity Page</h3>
+    <p id="security_key_message" class="text-danger text-center"></p>
+    <div>
+        <div id="security_key_option" class="topActivity-head">
+            <nobr>
+                <label for="security_key">*SECURITY KEY:</label>
+                <input type="text" id="security_key" name="security_key" class="border border-primary">
+                <button onclick="topActivity(),leaderBoard()" id="button_deposit"
+                    class="btn btn-primary d-inline">GenerateData</button><br><br>
+            </nobr>
+        </div>
+        <br>
+    </div>
+    <div class="classForInline">
+        <h4 class="topActivityTitle">Top Activity Data</h4>
+        <h4 class="leaderBoardTitle">Leaderboard Data<h4 class="text-center" id="leaderBoard"></h4>
+        </h4>
+    </div>
+    <p class="text-center text-danger" id="leaderboardNodata"></p>
+    <div class="table-wrapper">
+        <div class="divScroll2">
+            <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-left">
+                <tr id="table-header">
+                    <th class="text-center">Activity Type</th>
+                    <th class="text-center">Activity Details</th>
+                    <th class="text-center">Time</th>
+                </tr>
+                <tbody id="table_data"></tbody>
+            </table>
+        </div>
+        <div class="divScroll3">
+            <table class="container table-resposive table table-striped table-bordered border-primary mt-2">
+                <tr id="table-header">
+                    <th class="text-center">Top 100 users</th>
+                    <th class="text-center">Winnings</th>
+                    <th class="text-center">Reward</th>
+                    <th class="text-center">Won</th>
+                </tr>
+                <tbody id="table_data2"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../../js/hrefLinks.js">
+</script>

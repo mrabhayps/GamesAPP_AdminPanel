@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>allDepositTxnList</title>
+  <script src="../../js/script.js"></script>
+  <script src="../../commonClientConfig.js"></script>
+  <link rel="stylesheet" href="../../css/common.css">
+  <!-- <link rel="stylesheet" href="../../css/admin.css"> -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <script src="../../js/jquery37.js"></script>
+  <script type="text/javascript" src="../../js/navBar.js"></script>
+</head>
+
+<body>
+  <my-header></my-header>
+  <img src="../../icon/Logo.jpg" alt="gamesapp" id="logo">
+  <h3 class="text-center">DEPOSIT TXN LIST PANEL</h3>
+  <div >
+    <div id="security_key_option" class="deposit-head">
+      <nobr>
+        <label for="security_key">*SECURITY KEY:</label>
+        <input type="text" id="security_key" name="security_key" class="border border-primary">
+        <label for="list_option">*Select the option</label>
+        <select id="list_option" class="border border-primary">
+          <option value="lastHrTXN">last hour all TXN..</option>
+          <option value="allPendingTxn">all Pending TXN..</option>
+        </select>
+        <button onclick="getDepositTXNList()" id="button_deposit"
+          class="btn btn-primary d-inline">GetList</button><br><br>
+
+      </nobr>
+
+      <br>
+    </div>
+    <div class="divScroll">
+      <table class="container table-resposive table table-striped table-bordered border-primary mt-2 text-center">
+        <tr id="table-header">
+          <th>logID</th>
+          <th>UserName</th>
+          <th>Amount</th>
+          <th>createdAt</th>
+          <th>updatedAt</th>
+          <th>Pay status</th>
+
+        </tr>
+        <tbody id="table_data"></tbody>
+      </table>
+    </div>
+    <div id="prev_next_button" class="text-center"></div>
+  </div>
+</body>
+
+</html>
+<script src="../../js/hrefLinks.js">
+</script>
